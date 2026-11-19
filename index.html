@@ -2,19 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> contador </title>
+    <meta name="description" content="Contador interactivo en JavaScript: cada número muestra una palabra de una lista.">
+    <title>Contador</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="contenedor">
-        <h1> CONTEO </h1>
-        <span id="value">cualquier cosa</span>
-        <button class="Boton +">AUMENTAR</button>
-        <button class="Boton -"> DISMINUIR </button>
-        <button class="Boton 🍤">RESET</button>
-    </div>
-    <script src="/conteo.js"></script>
+    <main class="tarjeta">
+        <p class="etiqueta">Ejercicio de JavaScript</p>
+        <h1>Conteo</h1>
+
+        <div class="pantalla" aria-live="polite">
+            <span id="valor" class="numero">0</span>
+            <span id="palabra" class="palabra">agua</span>
+        </div>
+
+        <div class="botones">
+            <button type="button" class="boton boton--menos" data-accion="disminuir" aria-label="Disminuir">−</button>
+            <button type="button" class="boton boton--reset" data-accion="reiniciar">Reiniciar</button>
+            <button type="button" class="boton boton--mas" data-accion="aumentar" aria-label="Aumentar">+</button>
+        </div>
+
+        <ol class="lista" id="lista" aria-label="Palabras disponibles"></ol>
+        <p class="ayuda">Usa los botones o las teclas <kbd>↑</kbd> <kbd>↓</kbd> y <kbd>0</kbd>.</p>
+    </main>
+    <script src="./conteo.js"></script>
 </body>
 </html>
